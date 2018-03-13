@@ -1,0 +1,313 @@
+roots([1 1.75 2.15 1])
+
+ans =
+
+  -0.5210 + 1.0681i
+  -0.5210 - 1.0681i
+  -0.7081 + 0.0000i
+
+>> roots([1 1.75 -2.15 1])
+
+ans =
+
+  -2.6882 + 0.0000i
+   0.4691 + 0.3898i
+   0.4691 - 0.3898i
+
+>> abs(-2.1942e-1+4.2102e-1*j)
+
+ans =
+
+    0.4748
+
+>> g=tf([-15000 15000][14 1 0])
+ g=tf([-15000 15000][14 1 0])
+                    ↑
+Error: Unbalanced or unexpected parenthesis or bracket.
+ 
+>> g=tf([-15000 15000],[14 1 0])
+
+g =
+ 
+  -15000 s + 15000
+  ----------------
+     14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> g=tf([-15000 15000],[14 1 0],'iodelay',1)
+
+g =
+ 
+              -15000 s + 15000
+  exp(-1*s) * ----------------
+                 14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> gr=tf([0.000322 6.05e-5][1])
+ gr=tf([0.000322 6.05e-5][1])
+                         ↑
+Error: Unbalanced or unexpected parenthesis or bracket.
+ 
+>> gr=tf([0.000322 6.05e-5],[1])
+
+gr =
+ 
+  0.000322 s + 6.05e-05
+ 
+Continuous-time transfer function.
+
+>> Goro=g*gr
+
+Goro =
+ 
+              -4.83 s^2 + 3.923 s + 0.9075
+  exp(-1*s) * ----------------------------
+                       14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> nyquist(goro)
+Undefined function or variable 'goro'.
+ 
+Did you mean:
+>> nyquist(Goro)
+>> margin(Goro)
+>> gnew=tf([15000][14 1 0],'iodelay',1)
+ gnew=tf([15000][14 1 0],'iodelay',1)
+                ↑
+Error: Unbalanced or unexpected parenthesis or bracket.
+ 
+>> gnew=tf([15000],[14 1 0],'iodelay',1)
+
+gnew =
+ 
+                15000
+  exp(-1*s) * ----------
+              14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> margin(gnew)
+>> margin(Goro)
+>> margin(gnew)
+>> gnew=tf([-15000 15000],[14 1 0],'iodelay',1)
+
+gnew =
+ 
+              -15000 s + 15000
+  exp(-1*s) * ----------------
+                 14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> margin(gnew)
+>> [Kkr,a,wkr,b]=margin(gnew)
+Warning: The closed-loop system is unstable. 
+> In ctrlMsgUtils.warning (line 25)
+  In DynamicSystem/margin (line 65) 
+
+Kkr =
+
+    1.0013
+
+
+a =
+
+   81.6926
+
+
+wkr =
+
+   1.0729e+03
+
+
+b =
+
+   1.0714e+03
+
+>> help margin
+ margin  Gain and phase margins and crossover frequencies.
+ 
+    [Gm,Pm,Wcg,Wcp] = margin(SYS) computes the gain margin Gm, the phase 
+    margin Pm, and the associated frequencies Wcg and Wcp, for the SISO 
+    open-loop model SYS (continuous or discrete). The gain margin Gm is 
+    defined as 1/G where G is the gain at the -180 phase crossing. The 
+    phase margin Pm is in degrees. The frequencies Wcg and Wcp are in 
+    radians/TimeUnit (relative to the time units specified in SYS.TimeUnit, 
+    the default being seconds).
+ 
+    The gain margin in dB is derived by 
+       Gm_dB = 20*log10(Gm)
+    The loop gain at Wcg can increase or decrease by this many dBs before 
+    losing stability, and Gm_dB<0 (Gm<1) means that stability is most 
+    sensitive to loop gain reduction.  If there are several crossover 
+    points, margin returns the smallest margins (gain margin nearest to 
+    0dB and phase margin nearest to 0 degrees).
+ 
+    For a S1-by...-by-Sp array of linear systems, margin returns 
+    arrays of size [S1 ... Sp] such that
+       [Gm(j1,...,jp),Pm(j1,...,jp)] = margin(SYS(:,:,j1,...,jp)) .  
+ 
+    [Gm,Pm,Wcg,Wcp] = margin(MAG,PHASE,W) derives the gain and phase margins 
+    from the Bode magnitude, phase, and frequency vectors MAG, PHASE, and W 
+    produced by BODE. margin expects gain values MAG in absolute units and 
+    phase values PHASE in degrees. Interpolation is performed between 
+    frequency points to approximate the true stability margins.
+ 
+    margin(SYS), by itself, plots the open-loop Bode plot with the gain 
+    and phase margins marked with a vertical line. 
+ 
+    See also allmargin, bodeplot, bode, ltiview, DynamicSystem.
+
+    Reference page for margin
+    Other functions named margin
+
+>> gnew=tf([15000],[14 1 0],'iodelay',1)
+
+gnew =
+ 
+                15000
+  exp(-1*s) * ----------
+              14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> [Kkr,a,wkr,b]=margin(gnew)
+Warning: The closed-loop system is unstable. 
+> In ctrlMsgUtils.warning (line 25)
+  In DynamicSystem/margin (line 65) 
+
+Kkr =
+
+    0.9212
+
+
+a =
+
+  -75.3173
+
+
+wkr =
+
+   31.4159
+
+
+b =
+
+   32.7326
+
+>> (2*pi)/wkr
+
+ans =
+
+    0.2000
+
+>> (2*pi)
+
+ans =
+
+    6.2832
+
+>> 0.4*Kkr
+
+ans =
+
+    0.3685
+
+>> 0.05*tkr
+Undefined function or variable 'tkr'.
+ 
+>> tkr=(2*pi)/wkr
+
+tkr =
+
+    0.2000
+
+>> 0.05*tkr
+
+ans =
+
+    0.0100
+
+>> gnew
+
+gnew =
+ 
+                15000
+  exp(-1*s) * ----------
+              14 s^2 + s
+ 
+Continuous-time transfer function.
+
+>> gg=pade(gnew)
+
+gg =
+ 
+    -15000 s + 30000
+  ---------------------
+  14 s^3 + 29 s^2 + 2 s
+ 
+Continuous-time transfer function.
+
+>> gg=pade(gnew,1)
+
+gg =
+ 
+    -15000 s + 30000
+  ---------------------
+  14 s^3 + 29 s^2 + 2 s
+ 
+Continuous-time transfer function.
+
+>> margin(gg)
+>> [Kkr,a,wkr,b]=margin(gg)
+Warning: The closed-loop system is unstable. 
+> In ctrlMsgUtils.warning (line 25)
+  In DynamicSystem/margin (line 65) 
+
+Kkr =
+
+   6.7836e-05
+
+
+a =
+
+ -172.8820
+
+
+wkr =
+
+    0.2649
+
+
+b =
+
+   32.7326
+
+>> 0.4*Kkr
+
+ans =
+
+   2.7134e-05
+
+>> tkr=(2*pi)/wkr
+
+tkr =
+
+   23.7185
+
+>> 0.05*tkr
+
+ans =
+
+    1.1859
+
+>> 2.7134e-05*ans
+
+ans =
+
+   3.2179e-05
+
+>> 

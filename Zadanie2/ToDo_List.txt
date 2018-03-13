@@ -1,0 +1,22 @@
+2.c)
+Kkr = 0.9212
+wkr = 31.4159
+Tkr = 2pi/wkr = 0.2
+
+2d.)
+spytal som sa robi sa to cez PID blok v simulinku a cez tlacidlo "Tune", tam nam doladi resp navrhne nejake hodnoty
+pre ustalenie, mozeme ich este dokonfigurovat
+
+5. stale rovnako limitami ako v prvom zadani
+
+6.)
+-ako overit vypoctom polov URO, to sme nedokoncili ani v prvom zadani
+
+no tu uz bola dost nervozna vzhladom na to ze niektori nemali ani prve zadanie hotove, ta som zistil len to ze okrem toho 
+ze nam to overuje bode a nyquist ze su vo frekvencnej za hranicou stability cize v rozsahu [-1,infnity]
+tak poly uro musia byt dajako zaporne cize aj imaginarne ked si vypocitas hodnotu cez napr. abs(-5+8*j)
+
+4)IITAE nám kvantitatívne vyjadruje výhodnosť nášho riešenia, neratá len integrál keďže tam by sa zaporné plochy odčítali
+od kladných, ale nám ich ráta v absolútnej hodnote a zarátava aj časový priebeh ustálenia
+
+pri ulohe 2. mozeme urobit aj c), akurat to robim

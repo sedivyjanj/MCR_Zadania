@@ -1,0 +1,20 @@
+uloha2:
+	vypocita P a D regulatora
+	(uloha c. 2b)
+
+zadanie1_3:
+	vykresli nyquist a bode na zaklade "uloha2"
+	(uloha c. 6)
+
+Zadanie1_2:
+	vykreslenie najlepsieho priebehu a vsetkych spolu pre y(t) aj u(t)
+	(uloha c. 4)
+
+zadanie1:
+	vykreslenie prechodovej char.
+	(uloha c. 1)
+
+model2:
+	spravny model pre zadanie2 
+	je v nom uz aj pripravene na 2D ulohu, treba len zmenit PID 
+	(uloha c. 3)
