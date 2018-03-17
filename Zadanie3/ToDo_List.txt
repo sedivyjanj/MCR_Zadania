@@ -1,5 +1,12 @@
 Zadanie3
+<<<<<<< HEAD
 1. Zistit ci sme vypocitali spravne.
 2. a) mame prechodovu, dobre?
       mame asi z1-tym padom aj menovatela? spravna uvaha + dosadenie do vzorcov v cviku^
 3. nevieme nic...
+=======
+Zatial iba kokotiny
+Nemysli si ze som si to nevsimol, ze si nieco pushol
+Ale pravda, Zatial iba kokotiny
+fdasfas
+>>>>>>> 3d16f1381b91b01409391e491f8571e42ade629e
