@@ -1,4 +1,5 @@
 Zadanie3
-Zatial iba kokotiny
-Nemysli si ze som si to nevsimol, ze si nieco pushol
-Ale pravda, Zatial iba kokotiny
+1. Zistit ci sme vypocitali spravne.
+2. a) mame prechodovu, dobre?
+      mame asi z1-tym padom aj menovatela? spravna uvaha + dosadenie do vzorcov v cviku^
+3. nevieme nic...
