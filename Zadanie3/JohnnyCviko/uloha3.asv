@@ -1,0 +1,5 @@
+Gs=tf([15000],[14 1 0]);
+forward=tf([15000],[14 -27 13],'ioDelay',1);
+step(forward)
+tustin=c2d(Gs,1,'tustin')
+tustin=tf([256 517.2 258.6],[1 -1.9311 0.931],'i
