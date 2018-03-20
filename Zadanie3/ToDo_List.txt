@@ -1,18 +1,5 @@
-Zadanie3
-1. Zistit ci sme vypocitali spravne. 
-------->Dopravne oneskorenie viem!!!
-Ked mame dopravne oneskorenie tak je vzorkovanie rovne D.
-2. a) mame prechodovu, dobre?
-      mame asi z1-tym padom aj menovatela? spravna uvaha + dosadenie do vzorcov v cviku^
-
------->Ulohu dva budeme robit az buduci tyzden.(odovzdava sa o dva tyzdne)
-
-
-
-3. nevieme nic...
-------> Ulohu tri budeme robit az buduci tyzden. (odovzdava sa o dva tyzdne)
-
-prednaska 5 strana 20 
-tustin cez c2d
-vykreslit vsetky
-oneskorenie vzyd len na konci pridat
+Zadanie 3:
+1->DONE
+2-> dopocitat univerzalnu metodu
+3-> Zistit, ci nase vypocty a grafy su spravne
+    Vypocet polov a nul
