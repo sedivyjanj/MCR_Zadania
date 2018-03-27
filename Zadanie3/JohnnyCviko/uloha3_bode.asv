@@ -24,6 +24,6 @@ g=tf([15000],[14 1 0])
 gz = c2d(g, 1)
 gz = tf([523.2 510.9],[1 -1.931 0.9311],1);
 hold on 
-bode(g)
-title('Bode: Backward')
+bode(g,20)
+title('Step Response Backward')
 tustin=c2d(Gs,1,'tustin')
