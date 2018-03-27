@@ -7,10 +7,19 @@ gz2 = c2d(g,T2)
 gz3 = c2d(g,T3)
 figure
 bode(gz1);
+hold on
+bode(g);
+legend('C2D','Transfer Function')
 title('Bode Diagram T=0.1');
 figure
 bode(gz2);
+hold on
+bode(g);
+legend('C2D','Transfer Function')
 title('Bode Diagram T=1');
 figure
 bode(gz3);
+hold on
+bode(g);
+legend('C2D','Transfer Function')
 title('Bode Diagram T=10');

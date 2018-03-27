@@ -1,5 +1,7 @@
 Zadanie 3:
 1->DONE
-2-> dopocitat univerzalnu metodu
+2-> DONE univerzalna metoda je v JohnnyCviko nazvana UniverzalnaMetoda
+	vytvoril som word copy, kde som opravil grafy bodeho, lebo maju byt inak
 3-> Zistit, ci nase vypocty a grafy su spravne
     Vypocet polov a nul
+	k ulohe 3, myslim, ze mame spravne, len nam chyba Vypocet polov a nul...
