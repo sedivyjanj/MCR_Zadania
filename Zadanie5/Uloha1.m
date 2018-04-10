@@ -1,11 +1,13 @@
-g=tf([-15000 15000],[14 1 0],'iodelay',1);
+g=tf([-15000 15000],[14 1 0],'ioDelay',1);
 gz=c2d(g,1);
 g2=tf([1 0],[1 -1],1);
-gKon=gz*g2;
+gKon=gz*g2
 [num, den]=tfdata(gKon,'v');
 num=[num 0 0 0 0 0 0];
-deconvVect=deconv(num, den);
-stairs([0 deconvVect]) %TOTO BY SME MALI V GRAFE POSUSNUT OD NULY
+deconvVect=deconv([0 num], den)
+stairs(deconvVect) 
+
+%TOTO BY SME MALI V GRAFE POSUSNUT OD NULY
 %A 0 NA ZACIATKU JE TAM PRETO ZE DOPRAVNE ONESKORENIE NAM TO CELE POSUVA O
 %JEDNO DOPRAVA
 %DRUHA ULOHA BUDE TREBA NAS TVAR PREROBIT NA Y(z)/U(z) A NASU FUNKCIU
