@@ -15,21 +15,22 @@ P1=[1 0 -p2 -p3]
 sum(P)
 sum(Q)
 
-sim('uloha_simulink.slx');
+sim('uloha11_simulink.slx')
+%sim('uloha_simulink.slx');
 figure
-plot(Y);
+plot(YNew);
 title('Y');
 xlabel('Time');
 ylabel('Value');
 
 figure
-plot(U);
+plot(UNew);
 title('U');
 xlabel('Time');
 ylabel('Value');
 
 figure
-plot(E);
+plot(ENew);
 title('E');
 xlabel('Time');
 ylabel('Value');
