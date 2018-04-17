@@ -1,4 +1,4 @@
-g=tf([-15000 15000],[14 1 0],'ioDelay',1)%zatial bez D
+g=tf([-15000 15000],[14 1 0],'ioDelay',1)
 gz=c2d(g,1)%perioda vzorkovania 
 
 gzNew=c2d(g,0.5);
