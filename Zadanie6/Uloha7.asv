@@ -10,7 +10,7 @@ q3=(A(3))*(-q0+(1/sum(B)))
 
 p1=B(2)*q0
 p2=(B(3)-B(2))*q0+B(2)/sum(B)
-p3=(-B(3))*(q0-(1/sum(B)))
+p3=(-B(3))*(q0-(1/sum(B)));
 Q=[q0 q1 q2 q3]
 P=[1 -p2 -p2]
 P1=[1 0 -p1 -p2 -p3]
@@ -28,11 +28,11 @@ ylabel('Amplitude');
 figure
 plot(UNew);
 title('U');
-xlabel('Time');
-ylabel('Amplitude');
+xlabel('Amplitude');
+ylabel('Value');
 
 figure
 plot(ENew);
 title('E');
 xlabel('Time');
-ylabel('Amplitude');
+ylabel('Value');

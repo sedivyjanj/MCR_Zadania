@@ -6,7 +6,7 @@ hold on;
 plot(YNew);
 title('Y');
 xlabel('Time');
-ylabel('Value');
+ylabel('Amplitude');
 legend('Bez ohranicenia','S ohranicenim');
 
 figure
@@ -15,7 +15,7 @@ hold on;
 plot(UNew);
 title('U');
 xlabel('Time');
-ylabel('Value');
+ylabel('Amplitude');
 legend('Bez ohranicenia','S ohranicenim');
 
 figure
@@ -24,5 +24,5 @@ hold on;
 plot(ENew);
 title('E');
 xlabel('Time');
-ylabel('Value');
+ylabel('Amplitude');
 legend('Bez ohranicenia','S ohranicenim');

@@ -1,7 +1,7 @@
 g=tf([-15000 15000],[14 1 0],'ioDelay',1)
 gz=c2d(g,1)%perioda vzorkovania 
 
-gzNew=c2d(g,0.5);
+gzNew=c2d(g,3);%nova, zvysena perioda
 
 [B, A] = tfdata(gz, 'v')
 q0=1/sum(B)
@@ -37,8 +37,8 @@ hold on;
 plot(Y1)
 title('Y');
 xlabel('Time');
-ylabel('Value');
-legend('Sample time 1','Sample time 0.5')
+ylabel('Hodnota ustalenia');
+legend('Sample time 1','Sample time 3')
 
 figure
 plot(U);
@@ -46,8 +46,8 @@ hold on;
 plot(U1);
 title('U');
 xlabel('Time');
-ylabel('Value');
-legend('Sample time 1','Sample time 0.5')
+ylabel('Hodnota ustalenia');
+legend('Sample time 1','Sample time 3')
 
 figure
 plot(E);
@@ -55,5 +55,5 @@ hold on;
 plot(E1);
 title('E');
 xlabel('Time');
-ylabel('Value');
-legend('Sample time 1','Sample time 0.5')
+ylabel('Hodnota ustalenia');
+legend('Sample time 1','Sample time 3')
