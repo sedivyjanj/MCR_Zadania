@@ -1,0 +1,67 @@
+g=tf([-15000 15000],[14 1 0],'ioDelay',1)%zatial bez D
+gz=c2d(g,1)%perioda vzorkovania 
+
+% a0-a2, b0-b3 z nasej fun
+b0=0;b1=0;b2=-510.9;b3=1545;a0=0;a1=-1.9311;a2=0.9311;
+
+%ziadane poly
+a1zs=-0.2
+a2zs=-0.5
+a3zs=-0.3
+a4zs=-0.4
+
+a1z=exp(a1zs)
+a2z=exp(a2zs)
+a3z=exp(a3zs)
+a4z=exp(a4zs)
+
+A=[0 0 1 0;
+    b2 0 a1 1;
+    b3 b2 a2 a1;
+    0 b3 0 a2]
+B=[a1z-a1
+%A=[0 0 0 1 0;
+%    b2 0 0 a1 1;
+%    b3 b2 0 a2 a1;
+%    0 b3 b2 0 a2;
+%    0 0 b3 0 0]
+%B=[a1z-a1;
+%    a2z-a2;
+%    a3z;
+%    a4z;
+%    a5z]
+
+
+
+
+X=A\B
+
+q0=X(1)
+q1=X(2)
+q2=X(3)
+p1=X(4)
+p2=X(5)
+
+Q=[q0 q1 q2]
+P=[1 -p1 -p2]
+P1=[1 p1 p2]
+
+sim('simulink1.slx');
+figure
+plot(Y);
+title('Y');
+xlabel('Time');
+ylabel('Value');
+
+figure
+plot(U);
+title('U');
+xlabel('Time');
+ylabel('Value');
+
+figure
+plot(E);
+title('E');
+xlabel('Time');
+ylabel('Value');
+
