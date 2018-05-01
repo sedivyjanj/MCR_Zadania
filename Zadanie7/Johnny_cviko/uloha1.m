@@ -77,3 +77,11 @@ a3z
 
 O4=q1*b3+p2*a2
 a4z
+
+syms z;
+gz=((-510.9*z^-2+1545*z^-3)/(1-1.931*z^-1+0.9311*z^-2));
+grz=(q0+q1*z^-1)/(1+p1*z^-1+p2*z^-2);
+limitaY = limit(((gz*grz)/(1+gz*grz)),z,1)
+limitaU = limit(((grz)/(1+gz*grz)),z,1)
+limitaE = limit(((1)/(1+gz*grz)),z,1)
+
